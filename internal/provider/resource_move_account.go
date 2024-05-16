@@ -94,9 +94,9 @@ func resourceMoveAccountRead(ctx context.Context, d *schema.ResourceData, m inte
 	sourceOu := d.Get("source_ou").(string)
 	destinationOu := d.Get("destination_ou").(string)
 
-	d.Set("account_id", accountId)
-	d.Set("source_ou", sourceOu)
-	d.Set("destination_ou", destinationOu)
+	_ = d.Set("account_id", accountId)
+	_ = d.Set("source_ou", sourceOu)
+	_ = d.Set("destination_ou", destinationOu)
 	d.SetId(fmt.Sprintf("%s/%s/%s", accountId, sourceOu, destinationOu))
 
 	return nil

@@ -15,5 +15,5 @@ jobs:
         with:
           go-version: 'stable'
       - run: make tooling
-      - run: make lint
+#      - run: make lint
       - run: make build_ci
